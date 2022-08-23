@@ -26,4 +26,9 @@ public class PostServiceImlp implements PostService {
         System.out.println("PostServiceImlp-->selectByPrimaryKey");
         return postWithBLOBs;
     }
+
+
+    private Long countByExample (){
+        return null;
+    }
 }
