@@ -1,11 +1,17 @@
 package com.atguigu.springboot.controller;
 
 import com.atguigu.springboot.pojo.PostWithBLOBs;
+import com.atguigu.springboot.pojo.User;
 import com.atguigu.springboot.service.PostService;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.sun.org.apache.xml.internal.resolver.helpers.PublicId;
 import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * @Description
@@ -25,10 +31,10 @@ public class TestController {
     }
 
 //    @GetMapping("/getUsers")
-//    public PageInfo<User> getUsers(){
+//    public PageInfo<User> getUsers(Integer pid){
 //        // pageNum:当前页，pageSize:每页的显示的数据数目
 //        PageHelper.startPage(1,5);
-//        List<User> list = testService.selectAllExample();
+//        List<User> list = postService.selectByPrimaryKey(pid);
 //        // 上面两行代码必须在一起，设置.startPage()方法后立即查询数据
 //        PageInfo<User> pageInfo = new PageInfo<>(list);
 //        // 获得分页后的数据信息

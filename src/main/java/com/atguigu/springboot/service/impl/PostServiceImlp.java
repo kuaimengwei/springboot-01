@@ -14,8 +14,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class PostServiceImlp implements PostService {
 
-    private final PostMapper postMapper;
     //构造器注入
+    private final PostMapper postMapper;
     public PostServiceImlp(PostMapper postMapper){
         this.postMapper = postMapper;
     }
